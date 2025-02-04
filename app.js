@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Static Files
 app.use(express.static('public'));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 // Templating Engines
 app.use(expressLayouts);

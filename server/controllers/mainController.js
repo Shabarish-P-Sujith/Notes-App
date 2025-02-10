@@ -1,9 +1,10 @@
 exports.homepage = function(req, res) {
     res.render('index', { 
         locals1: { // always write locals inside render
-            title: "Note App",
+            title: "Notes App",
             description: "Created using NodeJS"
-        }
+        },
+        layout: "../views/layouts/front-page",
     });
 }
 

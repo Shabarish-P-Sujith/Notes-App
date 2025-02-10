@@ -66,3 +66,28 @@ h1, h2, h3, h4, h5, h6 {
     --bs-pagination-active-bg: var(--bs-primary-rgb);
     --bs-pagination-active-border-color: var(--bs-primary-rgb);
 }
+
+/* Home */
+@media (min-width: 1200px) {
+    .home {
+        background: 
+        url("../images/Human01.svg") left bottom no-repeat,
+        /* url("../images/Human01.svg") right bottom no-repeat, */
+        /* url("../images/Human02.svg") left top repeat, */
+        var(--bg-color);
+    }
+}
+
+.home-title::before {
+     content: url("../images/small-stars.png");
+     position: absolute;
+     left: -50px;
+     top: -30px;
+}
+
+.home-title::after {
+    content: url("../images/small-stars.png");
+    position: absolute;
+    right: -50px;
+    bottom: -30px;
+}

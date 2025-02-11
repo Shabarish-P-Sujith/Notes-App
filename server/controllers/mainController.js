@@ -1,6 +1,6 @@
 exports.homepage = function(req, res) {
     res.render('index', { 
-        locals1: { // always write locals inside render
+        locals: { // always write locals inside render
             title: "Notes App",
             description: "Created using NodeJS"
         },
@@ -10,9 +10,18 @@ exports.homepage = function(req, res) {
 
 exports.about = function(req, res) {
     res.render('about', { 
-        locals1: { // always write locals inside render
+        locals: { // always write locals inside render
             title: "About - Note App",
             description: "Created using NodeJS"
+        }
+    });
+}
+
+exports.error = function(req, res) {
+    res.render('error', { 
+        locals: { // always write locals inside render
+            title: "ERROR 404",
+            description: "Page Not Found"
         }
     });
 }

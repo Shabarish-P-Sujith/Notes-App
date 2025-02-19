@@ -6,14 +6,15 @@ const port = process.env.PORT || 3000;
 
 const expressLayouts = require('express-ejs-layouts');
 const expressSessions = require('express-session');
+const path = require('path');
 
 // Middlewares used to pass DATA through Forms and Pages
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Static Files
-app.use(express.static('public'));
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname, 'views'));
 
 // Templating Engines
 app.use(expressLayouts);
